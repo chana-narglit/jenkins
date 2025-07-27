@@ -12,11 +12,7 @@ pipeline {
     disableConcurrentBuilds()
   }
   triggers {
-    // תזמון – שני טריגרים נפרדים:
-    // כל יום שני ב־05:30
-    cron('30 5 * * 1')
-    // כל יום ב־14:00
-    cron('0 14 * * *')
+    cron('30 5 * * 1\n0 14 * * *')
   }
   stages {
     stage('Checkout') {
